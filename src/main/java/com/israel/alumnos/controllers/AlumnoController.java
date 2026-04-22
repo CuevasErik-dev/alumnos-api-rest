@@ -20,7 +20,7 @@ import com.israel.alumnos.services.AlumnoServices;
 
 @RestController
 @RequestMapping("/alumnos")
-@CrossOrigin(origins = "*") // permite la entrada de cualquier direccion
+@CrossOrigin(origins = "http://localhost:5173") 
 public class AlumnoController {
 
     @Autowired
@@ -32,7 +32,7 @@ public class AlumnoController {
         return alumnoServices.obtenerTodos();
     }
 
-    // Metodo para traer un alumno por numero de cont
+    // Metodo para traer un alumno por numero de control
     @GetMapping("/traer-alumno/{id}")
     public ResponseEntity<Alumno> TraerUnAlumno(@PathVariable Long id) {
         Optional<Alumno> alumno = alumnoServices.obtenerPorId(id);

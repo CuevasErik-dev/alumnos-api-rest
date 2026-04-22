@@ -1,5 +1,6 @@
 package com.israel.alumnos.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,6 +25,8 @@ public class Alumno{
     private String nombre;
     private String apellido;
     private String telefono;
+    
+    @Column(name = "email")
     private String gmail;
     private String carrera;
     private String imagenurl;
